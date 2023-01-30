@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service 
+metadata:
+  name: usermgmt-webapp-nodeport-service
+spec:
+  # ClusterIp, # NodePort
+  type: NodePort
+  selector:
+    app: usermgmt-webapp
+  ports: 
+    - name: http
+      port: 80 # Service Port
+      targetPort: 8080 # Container Port
+      nodePort: 31280 # Node Port

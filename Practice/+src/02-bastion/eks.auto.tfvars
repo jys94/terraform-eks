@@ -1,0 +1,1 @@
+cluster_name = "terraform-eks-seoul-1"
